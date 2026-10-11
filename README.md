@@ -8,16 +8,17 @@ The simulated device registers with an LwM2M server, or bootstraps first,
 keeps its registration up to date and answers the server in every
 content format: reads, writes, executes, observations with
 notifications, composite operations and Send. Its objects live in an
-`Objects` store the test can read and change. It is built on
-[lwm2m](https://github.com/cB-Sigma/lwm2m), go-coap and pion/dtls; no
-cgo. Written for SigmaM2M, a oneM2M platform; it has no dependency on it.
+`Objects` store the test can read and change. Since v0.2.0 the device
+logic is the client role of [lwm2m](https://github.com/cB-Sigma/lwm2m)
+(package `client`); this module keeps the simulator's names, its demo
+objects, the command and the tests that drive it. No cgo. Written for SigmaM2M, a oneM2M platform; it has no dependency on it.
 
 ## What is simulated
 
 | Feature | Status |
 |---|---|
 | Register, Update (every half lifetime, and on request), De-register; a 4.04 to an Update registers again | yes |
-| CoAP over UDP; CoAP over DTLS 1.2 with a PSK (AES-128-CCM-8, AES-128-GCM) | yes |
+| CoAP over UDP; CoAP over DTLS 1.2 with a PSK (AES-128-CCM-8, AES-128-GCM) or, since v0.2.0, an X.509 certificate (ECDHE-ECDSA) | yes |
 | Client-initiated bootstrap: Bootstrap-Request, -Discover, -Read, -Write, -Delete, -Finish, then registration with the provisioned server, PSK and lifetime | yes |
 | Read in TLV, SenML JSON and CBOR, LwM2M JSON and CBOR; single resources also in plain text, CBOR and opaque; 4.06 for others | yes |
 | Discover with attributes and `dim` | yes |
@@ -27,7 +28,7 @@ cgo. Written for SigmaM2M, a oneM2M platform; it has no dependency on it.
 | Send (POST /dp, SenML CBOR) | yes |
 | Refusals: Security object closed to the server (4.01), executable resources not readable or writable (4.05), unknown paths (4.04) | yes |
 | Default objects: Server (1), Device (3), Connectivity Monitoring (4), Temperature (3303); your own through `Objects` | yes |
-| pmin/pmax applied to notifications, queue mode, SMS, CoAP over TCP, OSCORE, raw public keys and certificates, firmware update | no |
+| pmin/pmax applied to notifications, queue mode, SMS, CoAP over TCP, OSCORE, raw public keys, firmware update | no |
 
 ## Choosing an LwM2M test client
 

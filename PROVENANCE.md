@@ -10,6 +10,11 @@ fixture moved. No code was ported or copied from another LwM2M
 implementation; Eclipse Leshan is used only as a test peer, in a
 container, through its demo server's REST API.
 
+On 2026-10-12 (v0.2.0) the device logic (sim.go, bootstrap.go and
+objects.go) moved, unchanged apart from its package name, error prefix
+and a new certificate mode, into the lwm2m module's `client` package;
+the files here now hold aliases to it.
+
 ## Sources
 
 | Area (files) | Followed |

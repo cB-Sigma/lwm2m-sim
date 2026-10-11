@@ -3,7 +3,7 @@ module github.com/cB-Sigma/lwm2m-sim/interop
 go 1.26.0
 
 require (
-	github.com/cB-Sigma/lwm2m v0.1.0
+	github.com/cB-Sigma/lwm2m v0.2.0
 	github.com/cB-Sigma/lwm2m-sim v0.0.0
 )
 

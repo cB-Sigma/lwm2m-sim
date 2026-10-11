@@ -1,5 +1,5 @@
-github.com/cB-Sigma/lwm2m v0.1.0 h1:hP+gm5Q1A+IkSDFGOYEIem91jYh7XsczoMKLnSLWsFk=
-github.com/cB-Sigma/lwm2m v0.1.0/go.mod h1:93sMOkEPlO30gODWeBmbylF8y5Wy3ojRuAjqw4/ZrWs=
+github.com/cB-Sigma/lwm2m v0.2.0 h1:cwGA2IZ/17+g8ufj0/BjzKftJIMmo7nV25w4FDIY8Os=
+github.com/cB-Sigma/lwm2m v0.2.0/go.mod h1:U3R9HRRsVNUwwbPJm8yMM5jP3TBvQh8C3n2b60hqums=
 github.com/dsnet/golib/memfile v1.0.0 h1:J9pUspY2bDCbF9o+YGwcf3uG6MdyITfh/Fk3/CaEiFs=
 github.com/dsnet/golib/memfile v1.0.0/go.mod h1:tXGNW9q3RwvWt1VV2qrRKlSSz0npnh12yftCSCy2T64=
 github.com/fxamacker/cbor/v2 v2.9.4 h1:xwjVlxEMR3S605oUlgBjKLTTeGFciYPGYCtF/35LKGo=

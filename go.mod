@@ -3,7 +3,7 @@ module github.com/cB-Sigma/lwm2m-sim
 go 1.26.0
 
 require (
-	github.com/cB-Sigma/lwm2m v0.1.0
+	github.com/cB-Sigma/lwm2m v0.2.0
 	github.com/pion/dtls/v3 v3.1.10
 	github.com/plgd-dev/go-coap/v3 v3.5.4
 )
