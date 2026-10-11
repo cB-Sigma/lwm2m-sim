@@ -1,0 +1,59 @@
+lwm2m-sim (a simulated LwM2M client device, in Go)
+Copyright 2026 Abhinav Gautam
+
+This module is licensed under the Apache License, Version 2.0 (LICENSE).
+
+The code was written for this module, from the OMA LwM2M technical
+specifications (PROVENANCE.md). It contains no code from other projects.
+Every file carries "Copyright 2026 Abhinav Gautam" and
+"SPDX-License-Identifier: Apache-2.0".
+
+Trademarks
+----------
+
+OMA, OMA SpecWorks, LightweightM2M and LwM2M are names and marks of OMA
+SpecWorks. This module is not made, endorsed or supported by OMA
+SpecWorks, and is not affiliated with it; the names are used only to say
+what the module simulates.
+
+Object model data
+-----------------
+
+The resource types come from github.com/cB-Sigma/lwm2m, whose built-in
+object model holds facts from the OMNA LwM2M registry (BSD-3-Clause,
+Copyright Open Mobile Alliance); that module's NOTICE carries the
+registry's licence text.
+
+Dependencies
+------------
+
+- github.com/cB-Sigma/lwm2m (LwM2M content formats; Copyright 2026
+  Abhinav Gautam, Apache-2.0), with github.com/fxamacker/cbor/v2 and
+  github.com/x448/float16 (MIT).
+- github.com/plgd-dev/go-coap/v3 v3.5.4 (CoAP over UDP and DTLS):
+  Apache License 2.0, Copyright the go-coap authors (plgd.dev).
+- github.com/pion/dtls/v3 v3.1.10, github.com/pion/logging,
+  github.com/pion/transport/v5: MIT licence, Copyright The Pion
+  community.
+- golang.org/x/crypto, x/net, x/sync, x/sys, x/exp: BSD-3-Clause,
+  Copyright The Go Authors.
+- go.uber.org/atomic: MIT licence, Copyright Uber Technologies, Inc.
+- github.com/dsnet/golib/memfile: BSD-3-Clause, Copyright Joe Tsai.
+- The Go standard library (BSD-3-Clause, Copyright The Go Authors).
+
+Interop tests (interop/, a separate test-only module)
+-----------------------------------------------------
+
+interop/peer/Dockerfile downloads Eclipse Leshan's demo server, demo
+bootstrap server and demo client 2.0.0-M18 (Eclipse Public License 2.0
+or Eclipse Distribution License 1.0, Copyright the Leshan contributors)
+from Maven Central into an eclipse-temurin:21-jre-alpine image at test
+time; nothing of Leshan is copied into this repository. The tests talk
+to the demo server's REST API, whose request shapes were read from its
+published sources (facts only).
+
+Test data
+---------
+
+Every endpoint name, value, key and address in this module is a made-up
+demo value.
